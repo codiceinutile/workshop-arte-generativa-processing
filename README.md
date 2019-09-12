@@ -12,6 +12,10 @@ In questo repository puoi trovare codice e risorse per i partecipanti ai corsi d
     * [Cerchi ed ellissi](#cerchi-ed-ellissi)
     * [Triangoli](#triangoli)
     * [Archi](#archi)
+* [Colori](#colori)
+    * [RGB](#rgb)
+    * [Trasparenza](#trasparenza)
+    * [HSB](#hsb)
 * [Angoli, gradi e radianti](#angoli-gradi-e-radianti)
 
 ## Tools
@@ -88,6 +92,42 @@ Per disegnare un arco sullo schermo abbiamo la necessità di avere sei parametri
 ```
 arc(x, y, width, height, start, stop);
 ```
+## Colori
+### RGB
+Processing di default lavora in RGB (Red, Green, Blue). Ciascun parametro può assumere un valore da 0 a 255. Dalla combinazione di questi parametri posso ottenere tutti i colori.
+
+Ad esempio, per assegnare un colore allo sfondo posso scrivere:
+```
+background(255, 0, 0); 
+```
+In questo caso sarà di colore *rosso*.
+
+Se i tre parametri RGB coincidono sarò in scala di grigio e, per comodità, posso inserire un parametro solo. Scrivere `background(127);` equivale a `background(127, 127, 127);` ma è più comodo e veloce.
+
+**Attenzione:** se sei abituato/a a usare colori con valori esadecimali, puoi inserire anche quei valori al posto dell'RGB e Processing li convertirà automaticamente:
+```
+background(#FF0000);
+```
+
+### Trasparenza
+Aggiungendo un quarto parametro posso lavorare con la trasparenza (chiamata anche *alpha* o *opacity*). Il valore è sempre compreso, di default, tra 0 e 255.
+
+### HSB
+È possibile modificare il sistema di default di Processing per utilizzare, ad esempio, il sistema HSB (Hue, Saturation e Brightness) rispetto all'RGB. È sufficiente inserire questo codice nel nostro programma:
+```
+colorMode(HSB);
+```
+Anche in questo caso i valori di default sono da 0 a 255 per tutti e tre i parametri.
+
+### Fill e stroke
+Alle forme che disegno posso assegnare un colore di riempimento `fill();` oppure per le linee o i bordi con `stroke();`. L'indicazione del colore deve essere inserita *sempre* prima di disegnare Per esempio:
+```
+fill(0, 255, 0);
+stroke(255, 0, 0);
+rect(10, 10, 50, 50);
+```
+Se voglio rimuovere il colore di riempimento uso `noFill()` mentre, per eliminare, quello del bordo `noStroke()`.
+
 ## Angoli, gradi e radianti
 Gradi e radianti sono due modi diversi di misurare gli angoli. Siamo abituati a misurare gli angoli in gradi ma Processing preferisce l'indicazione in radianti. Per fortuna esistono delle funzioni che ci aiutano a convertire i valori:
 
