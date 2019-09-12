@@ -94,7 +94,7 @@ La funzione `triangle()` necessita di sei variabili: le posizioni x e y di tutti
 triangle(x1, y1, x2, y2, x3, y3);
 ```
 ### Archi
-Per disegnare un arco sullo schermo abbiamo la necessità di avere sei parametri: x e y del punto di riferimento (come per i [cerchi](#cerchi-ed-ellissi), la larghezza e l'altezza e l'angolo di inizio e fine dell'arco espresso in ]π[**radianti**](#angoli-gradi-e-radianti).
+Per disegnare un arco sullo schermo abbiamo la necessità di avere sei parametri: x e y del punto di riferimento (come per i [cerchi](#cerchi-ed-ellissi), la larghezza e l'altezza e l'angolo di inizio e fine dell'arco espresso in [**radianti**](#angoli-gradi-e-radianti).
 ```processing
 arc(x, y, width, height, start, stop);
 ```
@@ -171,6 +171,7 @@ void draw() {
 ```
 
 ### Eventi
+
 Processing è in grado di riconoscere quando premiamo i tasti del mouse o sulla tastiera con le funzioni `mousePressed()` e `keyPressed()`.
 
 #### Esempio
