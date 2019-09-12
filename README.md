@@ -25,6 +25,11 @@ In questo repository puoi trovare codice e risorse per i partecipanti ai corsi d
     * [Operatori](#operatori)
     * [Controlli condizionali](#controlli-condizionali)
 * [Ripetizione](#ripetizione)
+* [Casualità](#casualita)
+    * [Random](#random)
+    * [Random Gaussian](#random-gaussian)
+* [Trasformazioni](#trasformazioni)
+    * [Matrix](#matrix)
 * [Angoli, gradi e radianti](#angoli-gradi-e-radianti)
 * [Salvare](#salvare)
 
@@ -291,6 +296,106 @@ void draw() {
 ```
 
 ## Ripetizione
+Una cosa che capita di dover fare spesso è ripetere un'azione più volte. Per farlo utilizziamo i cicli for. I cicli hanno sempre bisogno di utilizzare una variabile detta contatore.
+
+```processing
+for(int i = 0; i < 100; i++) {
+
+}
+```
+Il codice precedente può essere spiegato così:
+>>> La nostra variabile contatore si chiamerà **i**, è un numero intero e il suo valore iniziale è uguale a **0**. Finché il valore di **i** sarà inferiore a 100 ripeti il ciclo. A ogni ciclo aumenta il valore di **i** di 1.
+
+#### Esempio
+```processing
+void setup() {
+  size(500, 500);
+  background(255);
+  fill(255, 0, 0);
+}
+
+void draw() {
+  for(int i = 0; i < width; i += 10) {
+    rect(i, 0, 10, 10);
+  }
+}
+```
+
+#### Esempio
+In questo esempio si crea una griglia inserendo un ciclo for dentro a un altro
+```processing
+void setup() {
+  size(500, 500);
+  background(255);
+  fill(255, 0, 0);
+}
+
+void draw() {
+  for (int i = 0; i < width; i += 10) {
+    for (int j = 0; j < height; j += 10) {
+      rect(i, j, 10, 10);
+    }
+  }
+}
+
+```
+
+## Casualità
+Molti artisti di artisti che si occupano di arte generativa utilizzano varie forme di casualità più o meno controllata all'interno dei loro lavori. È importante che la casualità non prenda il sopravvento su quello che vogliamo creare ma, al contrario, ci aiuti a trovare nuovi spunti.
+
+### Random
+La funzione `random()` resituisce un numero casuale di tipo *float* compreso tra 0 e il numero inserito all'interno della funzione.
+```processing
+// Restituisci un numero casuale tra 0 e 20.
+println(random(20));
+```
+Inserendo due numeri il primo corrisponde al valore minimo e il secondo al massimo:
+```processing
+// Restituisci un numero casuale tra 10 e 20.
+println(random(10, 20));
+```
+
+### Random Gaussian
+Per spiegarla nel modo più semplice possibile: `randomGaussian()` è una funzione casuale che, però, rispetta alcuni principi matematici (la media dei valori è 0 e la deviazione standard è 1) restituendo, quindi, valori che sono meno casuali rispetto alla funzione `random()`. La funzione non accetta parametri
+```processing
+float rg = randomGaussian * 10;
+```
+
+## Trasformazioni
+Può capitare di voler applicare delle trasformazioni alle forme disegnate sullo schermo. Capire come usare le trasformazioni non è semplicissimo ma niente che non si possa risolvere con un po' di semplice esercizio.
+
+Le trasformazioni più comuni sono:
+* `translate()`;
+* `rotate()`;
+
+La funzione `rotate();` accetta valori in [*radianti*](#angoli-gradi-e-radianti).
+
+### Matrix
+Dal momento che tutte le trasformazioni si applicano allo sketch per intero di solito si ragiona a *livelli* o **Matrix** per gestire meglio le trasformazioni. In breve: il comando `pushMatrix();` salva lo stato attuale dello sketch e creare un nuovo livello, poi applichiamo le trasformazioni e, infine, possiamo richiamare il livello precedente con la funzione `popMatrix();`.
+
+#### Esempio
+```processing
+void setup() {
+  size(500, 500);
+  background(255);
+  noLoop();
+  noStroke();
+  rectMode(CENTER);
+}
+
+void draw() {
+  fill(255, 0, 0);
+  rect(width/2, 100, 50, 50);
+  
+  pushMatrix();
+  fill(0, 0, 255);
+  translate(width/2, height/2);
+  rotate(radians(45));
+  rect(0, 0, 50, 50);
+  pushMatrix();
+}
+```
+
 
 ## Angoli, gradi e radianti
 Gradi e radianti sono due modi diversi di misurare gli angoli. Siamo abituati a misurare gli angoli in gradi ma Processing preferisce l'indicazione in radianti. Per fortuna esistono delle funzioni che ci aiutano a convertire i valori:
