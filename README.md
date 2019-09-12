@@ -1,6 +1,19 @@
 # Workshop Arte Generativa
 In questo repository puoi trovare codice e risorse per i partecipanti ai corsi di Arte Generativa con [Processing](https://www.processing.org) tenuti da [codiceinutile](https://www.codiceinutile.org) nel 2019. Il workshop è indirizzato sia a chi ha già esperienze di programmazione sia a chi parte completamente da zero.
 
+## Indice
+* [Tools](#tools)
+* [Getting Started](#getting-started)
+    * [Lo schermo e i pixel](#lo-schermo-e-i-pixel)
+    * [Commenti](#commenti)
+* [Forme Geometriche](#forme-geometrice)
+    * [Linee](#linee)
+    * [Rettangoli e quadrati](#rettangoli-e-quadrati)
+    * [Cerchi ed ellissi](#cerchi-ed-ellissi)
+    * [Triangoli](#triangoli)
+    * [Archi](#archi)
+* [Angoli, gradi e radianti](#angoli-gradi-e-radianti)
+
 ## Tools
 La prima cosa da fare è scaricare Processing a [questo indirzzo](https://processing.org/download/). Processing è un linguaggio di programmazione *open source* e gratuito, disponibile per Windows, macOS e Linux.
 
@@ -15,6 +28,7 @@ void draw() {
 
 }
 ```
+### Lo schermo e i pixel
 Ricorda: lo schermo ragiona in **pixel** e il punto di riferimento (0, 0) è rappresentato dall'angolo in alto a sinistra dello schermo. La funzione `size()` determina la grandezza della nostra tela: utilizzeremo principalmente la risoluzione 1920x1080 che corrisponde a 16:9 full HD. In alternativa puoi usare la funzione `fullScreen()` che adatterà lo sketch alla risoluzione dello schermo del tuo computer.
 
 Se utilizzi uno schermo ad alta risoluzione, come, ad esempio, un *retina display* consiglio di utilizzare la funzione: `pixelDensity(2)` che renderà i tuoi sketch più definiti.
@@ -31,7 +45,19 @@ void draw() {
 
 }
 ```
-
+### Commenti
+All'interno del codice puoi scrivere dei commenti da utilizzare come note o come riferimento. Se sono commenti brevi di una sola riga, puoi scriverli così:
+```
+// Questo è un commento
+```
+Se, invece, sono commenti più lunghi:
+```
+/*
+    Questo è un commento lungo
+    che occupa più righe e in cui
+    posso scrivere molte cose
+*/
+```
 ## Forme geometriche
 ### Linee
 Per disegnare una linea servono quattro parametri: posizione x e y del primo punto e posizione x e y del secondo punto:
@@ -48,4 +74,35 @@ Di default la posizione x e y di riferimento si riferiscono all'angolo in alto a
 rectMode(CENTER);
 ```
 ### Cerchi ed ellissi
-Come per i quadrati e i rettangoli, per disegnare un cerchio avrai sempre bisogno di quattro parametri: x e y di riferimento e 
+Come per i quadrati e i rettangoli, per disegnare un cerchio avrai sempre bisogno di quattro parametri: x e y di riferimento e larghezza e altezza del cerchio. Se questi ultimi due parametri non coincidono, disegneremo un ellisse:
+```
+ellipse(x, y, width, height);
+```
+### Triangoli
+La funzione `triangle()` necessita di sei variabili: le posizioni x e y di tutti i punti di riferimento:
+```
+triangle(x1, y1, x2, y2, x3, y3);
+```
+### Archi
+Per disegnare un arco sullo schermo abbiamo la necessità di avere sei parametri: x e y del punto di riferimento (come per i [cerchi](#cerchi-ed-ellissi), la larghezza e l'altezza e l'angolo di inizio e fine dell'arco espresso in ]π[**radianti**](#angoli-gradi-e-radianti).
+```
+arc(x, y, width, height, start, stop);
+```
+## Angoli, gradi e radianti
+Gradi e radianti sono due modi diversi di misurare gli angoli. Siamo abituati a misurare gli angoli in gradi ma Processing preferisce l'indicazione in radianti. Per fortuna esistono delle funzioni che ci aiutano a convertire i valori:
+
+Da gradi a radianti
+```
+float deg = 45.0;
+float rad = radians(deg);
+println(deg + " degrees is " + rad + " radians");
+```
+
+Da radianti a gradi
+```
+float rad = PI/4;
+float deg = degrees(rad);
+println(rad + " radians is " + deg + " degrees");
+```
+
+In ogni caso la circonferenza completa (360°) corrisponde a **2π**, la metà (180°) a **π**, l'angolo retto (90°) da **π/2** e l'angolo di 270° da **3/2π**.
