@@ -23,7 +23,7 @@ La prima cosa da fare è scaricare Processing a [questo indirzzo](https://proces
 
 ## Getting Started
 Tutti i programmi che realizzeremo avranno questo codice di partenza:
-```
+```processing
 void setup() {
 
 }
