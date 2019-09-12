@@ -304,7 +304,7 @@ for(int i = 0; i < 100; i++) {
 }
 ```
 Il codice precedente può essere spiegato così:
->>> La nostra variabile contatore si chiamerà **i**, è un numero intero e il suo valore iniziale è uguale a **0**. Finché il valore di **i** sarà inferiore a 100 ripeti il ciclo. A ogni ciclo aumenta il valore di **i** di 1.
+> La nostra variabile contatore si chiamerà **i**, è un numero intero e il suo valore iniziale è uguale a **0**. Finché il valore di **i** sarà inferiore a 100 ripeti il ciclo. A ogni ciclo aumenta il valore di **i** di 1.
 
 #### Esempio
 ```processing
