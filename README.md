@@ -42,7 +42,7 @@ Ricorda: lo schermo ragiona in **pixel** e il punto di riferimento (0, 0) è rap
 Se utilizzi uno schermo ad alta risoluzione, come, ad esempio, un *retina display* consiglio di utilizzare la funzione: `pixelDensity(2)` che renderà i tuoi sketch più definiti.
 
 Una versione più completa del codice di partenza potrebbe, dunque, essere:
-```
+```processing
 void setup() {
     size(1920, 1080);
     pixelDensity(2);
@@ -56,11 +56,11 @@ void draw() {
 
 ### Commenti
 All'interno del codice puoi scrivere dei commenti da utilizzare come note o come riferimento. Se sono commenti brevi di una sola riga, puoi scriverli così:
-```
+```processing
 // Questo è un commento
 ```
 Se, invece, sono commenti più lunghi:
-```
+```processing
 /*
     Questo è un commento lungo
     che occupa più righe e in cui
