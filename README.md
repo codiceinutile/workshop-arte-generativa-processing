@@ -170,7 +170,7 @@ void draw() {
 }
 ```
 
-### Eventi
+### Eventi
 
 Processing è in grado di riconoscere quando premiamo i tasti del mouse o sulla tastiera con le funzioni `mousePressed()` e `keyPressed()`.
 
