@@ -16,6 +16,8 @@ In questo repository puoi trovare codice e risorse per i partecipanti ai corsi d
     * [RGB](#rgb)
     * [Trasparenza](#trasparenza)
     * [HSB](#hsb)
+* [Variabili built-in e mouse](#variabili-built-in-e-mouse)
+    * [Eventi](#eventi)
 * [Angoli, gradi e radianti](#angoli-gradi-e-radianti)
 
 ## Tools
@@ -32,6 +34,7 @@ void draw() {
 
 }
 ```
+All'interno di `setup()` scriveremo il codice che verrà eseguito una volta solo all'avvio del nostro programma mentre il codice inserito in `draw()` verrà ripetuto in loop a 60 frame per secondo di default.
 
 ### Lo schermo e i pixel
 Ricorda: lo schermo ragiona in **pixel** e il punto di riferimento (0, 0) è rappresentato dall'angolo in alto a sinistra dello schermo. La funzione `size()` determina la grandezza della nostra tela: utilizzeremo principalmente la risoluzione 1920x1080 che corrisponde a 16:9 full HD. In alternativa puoi usare la funzione `fullScreen()` che adatterà lo sketch alla risoluzione dello schermo del tuo computer.
@@ -132,6 +135,62 @@ stroke(255, 0, 0);
 rect(10, 10, 50, 50);
 ```
 Se voglio rimuovere il colore di riempimento uso `noFill()` mentre, per eliminare, quello del bordo `noStroke()`.
+
+## Variabili built-in e mouse
+
+Processing ci permette di usare alcune variabili built-in:
+* `width`: la larghezza del nostro sketch
+* `height`: l'altezza del nostro sketch
+* `mouseX`: la posizione X del mouse (da usare in dentro la funzione **draw()**)
+* `mouseY`: la posizione Y del mouse (da usare in dentro la funzione **draw()**)
+* `pmouseX`: la posizione X del mouse nel frame precedente
+* `pmouseY`: la posizione Y del mouse nel frame precedente
+
+#### Esempio 1:
+```processing
+void setup() {
+  size(1920, 1080);
+  background(255);
+}
+
+void draw() {
+  ellipse(mouseX, mouseY, 50, 50);
+}
+```
+
+#### Esempio 2
+```processing
+void setup() {
+  size(1920, 1080);
+}
+
+void draw() {
+  background(255);
+  ellipse(mouseX, mouseY, 50, 50);
+}
+```
+
+### Eventi
+Processing è in grado di riconoscere quando premiamo i tasti del mouse o sulla tastiera con le funzioni `mousePressed()` e `keyPressed()`.
+
+#### Esempio
+```processing
+void setup() {
+  size(500, 500);
+}
+
+void draw() {
+  background(255);
+}
+
+void mousePressed() {
+  background(255, 0, 0);
+}
+
+void keyPressed() {
+  background(0, 255, 0);
+}
+```
 
 ## Angoli, gradi e radianti
 Gradi e radianti sono due modi diversi di misurare gli angoli. Siamo abituati a misurare gli angoli in gradi ma Processing preferisce l'indicazione in radianti. Per fortuna esistono delle funzioni che ci aiutano a convertire i valori:
