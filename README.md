@@ -434,10 +434,10 @@ void mousePressed() {
 }
 ```
 
+**Attenzione:** ricordati sempre di salvare lo sketch, in questo modo le immagini esportate saranno salvate nella stessa cartella.
+
 ### Esportare in PDF
 La guida su come esportare i PDF si trova a [questo link](https://processing.org/reference/libraries/pdf/index.html)
-
-**Attenzione:** ricordati sempre di salvare lo sketch, in questo modo le immagini esportate saranno salvate nella stessa cartella.
 
 ## Links
 * [Corso su Processing in italiano](https://blog.federicopepe.com/processing)
