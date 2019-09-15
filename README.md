@@ -441,5 +441,9 @@ void mousePressed() {
 * Il libro [Generative Design](http://generative-gestaltung.de/1/) con gli esercizi in Processing da poter scaricare
 * Ispirazione:
     * [Sol Lewitt](https://www.paulacoopergallery.com/exhibitions/sol-lewitt-2016-09-08/installation-views)
+    * [Casey Reas](http://reas.com) uno dei due creatori di Processing
+    * [Ben Fry](https://benfry.com) uno dei due creatori di Processing e il suo studio [Fathom](https://fathom.info)
     * [Matt DesLaurier](https://www.behance.net/mattdesl)
     * [Manolo Gamboa Naon](https://www.behance.net/manoloide)
+    * Hashtag [#plottertwitter](https://twitter.com/hashtag/plottertwitter)
+    * [Frederik Vanhoutte](http://www.wblut.com/index.html)
