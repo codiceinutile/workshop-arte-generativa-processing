@@ -33,6 +33,7 @@ In questo repository puoi trovare codice e risorse per i partecipanti ai corsi d
     * [Matrix](#matrix)
 * [Angoli, gradi e radianti](#angoli-gradi-e-radianti)
 * [Salvare](#salvare)
+* [Links](#links)
 
 ## Tools
 La prima cosa da fare è scaricare Processing a [questo indirzzo](https://processing.org/download/). Processing è un linguaggio di programmazione *open source* e gratuito, disponibile per Windows, macOS e Linux.
@@ -433,3 +434,12 @@ void mousePressed() {
 ```
 
 **Attenzione:** ricordati sempre di salvare lo sketch, in questo modo le immagini esportate saranno salvate nella stessa cartella.
+
+## Links
+* [Corso su Processing in italiano](https://blog.federicopepe.com/processing)
+* Video tutorial di Processing in inglese: [The Coding Train](https://youtube.com/thecodingtrain/)
+* Il libro [Generative Design](http://generative-gestaltung.de/1/) con gli esercizi in Processing da poter scaricare
+* Ispirazione:
+    * [Sol Lewitt](https://www.paulacoopergallery.com/exhibitions/sol-lewitt-2016-09-08/installation-views)
+    * [Matt DesLaurier](https://www.behance.net/mattdesl)
+    * [Manolo Gamboa Naon](https://www.behance.net/manoloide)
