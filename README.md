@@ -16,6 +16,7 @@ In questo repository puoi trovare codice e risorse per i partecipanti ai corsi d
     * [RGB](#rgb)
     * [Trasparenza](#trasparenza)
     * [HSB](#hsb)
+    * [Libreria Nice Color Palettes](#libreria-nice-color-palettes)
 * [Variabili built-in e mouse](#variabili-built-in-e-mouse)
     * [Eventi](#eventi)
 * [Variabili](#variabili)
@@ -148,6 +149,9 @@ stroke(255, 0, 0);
 rect(10, 10, 50, 50);
 ```
 Se voglio rimuovere il colore di riempimento uso `noFill()` mentre, per eliminare, quello del bordo `noStroke()`.
+
+### Libreria Nice Color Palettes
+Scarica la libreria a [questo link](https://github.com/federico-pepe/nice-color-palettes/archive/v.0.1.0-beta.zip). Apri il file .zip e sposta la cartella nella cartella **libraries** che su Mac si trova dentro `~/Documents/Processing` e su Windows in `Documents/Processing`.
 
 ## Variabili built-in e mouse
 
