@@ -16,7 +16,7 @@ In questo repository puoi trovare codice e risorse per i partecipanti ai corsi d
     * [RGB](#rgb)
     * [Trasparenza](#trasparenza)
     * [HSB](#hsb)
-    * [Libreria Nice Color Palettes](#libreria-nice-color-palettes)
+    * 🆕 [Libreria Nice Color Palettes](#libreria-nice-color-palettes)
 * [Variabili built-in e mouse](#variabili-built-in-e-mouse)
     * [Eventi](#eventi)
 * [Variabili](#variabili)
@@ -33,7 +33,7 @@ In questo repository puoi trovare codice e risorse per i partecipanti ai corsi d
     * [Matrix](#matrix)
 * [Angoli, gradi e radianti](#angoli-gradi-e-radianti)
 * [Salvare](#salvare)
-* [Links](#links)
+* 🆕 [Links](#links)
 
 ## Tools
 La prima cosa da fare è scaricare Processing a [questo indirzzo](https://processing.org/download/). Processing è un linguaggio di programmazione *open source* e gratuito, disponibile per Windows, macOS e Linux.
