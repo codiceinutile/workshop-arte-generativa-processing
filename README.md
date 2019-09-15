@@ -26,7 +26,7 @@ In questo repository puoi trovare codice e risorse per i partecipanti ai corsi d
     * [Operatori](#operatori)
     * [Controlli condizionali](#controlli-condizionali)
 * [Ripetizione](#ripetizione)
-* [Casualità](#casualita)
+* [Casualità](#casualità)
     * [Random](#random)
     * [Random Gaussian](#random-gaussian)
 * [Trasformazioni](#trasformazioni)
