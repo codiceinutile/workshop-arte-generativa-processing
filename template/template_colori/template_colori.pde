@@ -16,7 +16,7 @@ void setup() {
   
   for(int i = 0; i < width; i+= 30) {
     for(int j = 0; j < height; j += 30) {
-      fill(palette.colors[round(random(4))]);
+      fill(palette.colors[floor(random(4))]);
       rect(i, j, 20, 20);
     }
   }
