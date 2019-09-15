@@ -1,8 +1,8 @@
 import nice.palettes.*;
 ColorPalette palette;
-int count = 30;
-int radius = 20;
-int margin = 40;
+int count = 50;
+int radius = 10;
+int margin = 10;
 
 void setup() {
   size(500, 500);
@@ -15,8 +15,8 @@ void setup() {
     for (int j = 0; j <= count; j++) {
       float x = lerp(margin, width-margin, map(i, 0, count, 0, 1));
       float y = lerp(margin, height-margin, map(j, 0, count, 0, 1));
-      fill(palette.colors[floor(random(4))], random(255));
-      if (random(1) < 0.3) {
+      fill(palette.colors[floor(random(4))]);
+      if (random(1) < 0.1) {
         float diam = radius + randomGaussian()*20;
         rect(x, y, diam, diam);
       }
