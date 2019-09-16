@@ -451,3 +451,5 @@ La guida su come esportare i PDF si trova a [questo link](https://processing.org
     * [Manolo Gamboa Naon](https://www.behance.net/manoloide)
     * Hashtag [#plottertwitter](https://twitter.com/hashtag/plottertwitter)
     * [Frederik Vanhoutte](http://www.wblut.com/index.html)
+    * [Roberto Fazio](https://studiorf.io)
+    * [Ultravioletto](https://www.ultraviolet.to)
